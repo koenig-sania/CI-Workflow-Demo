@@ -1,5 +1,7 @@
 name : CI Workflow Automation
-on : push
+on : 
+ push:
+ workflow_dispatch:
 jobs:
   buildandtest:
     runs-on: ubuntu-latest
