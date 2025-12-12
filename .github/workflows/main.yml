@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run Composite CI Action
-        uses: ./.github/actions/ci-check/cc1.yml
+        uses: ./.github/actions/ci-check
 
         
      
