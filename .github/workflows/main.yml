@@ -6,23 +6,9 @@ jobs:
   buildandtest:
     runs-on: ubuntu-latest
     steps:
-       # Get Code
-       - name: Get code
-         uses: actions/checkout@v6
+      - name: Run Composite CI Action
+        uses: ./.github/actions/ci-check
 
-       # Install NodeJS
-       - name: Install NodeJS
-         uses: actions/setup-node@v6
-         with:
-           node-version: 24.x
-
-       # Install Dependencies
-       - name: Install dependencies
-         run: npm ci
-
-      # run test
-       - name: Run tests
-         run: npm test
         
      
     
