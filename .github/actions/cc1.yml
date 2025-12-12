@@ -1,0 +1,19 @@
+name: "CI Composite Action"
+description: "Runs checkout, setup-node and tests"
+runs:
+  using: "composite"
+  steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: "22"
+
+    - name: Install dependencies
+      run: npm install
+
+
+    - name: Run tests
+      run: npm test
